@@ -9,27 +9,17 @@
 <body>
 	<div class="container">
 		<div class="hero-white">
-			<div class="header clearfix">
-				<a href="/" class="logo"></a>
-				<ul class="menu">
-					<li><a href="/">домой</a></li>
-					<li><a href="products.html" class="active">продукты</a></li>
-					<li><a href="contact.html">контакты</a></li>
-
-				</ul>
-				<a href="#" class="search"></a>
-                <a href="#" class="basket"></a>
-			</div>
+            {% include 'geekshop/includes/header.html' %}
 		</div>
 
 		<div class="details">
 			<div class="links clearfix">
 				<ul class="links-menu">
-					<li><a href="#" class="active">все</a></li>
-					<li><a href="#">дом</a></li>
-					<li><a href="#">офис</a></li>
-					<li><a href="#">модерн</a></li>
-					<li><a href="#">классика</a></li>
+                {{ request.resolver_match.url_name }}
+                    {% for link in links_menu %}
+					    <li><a href="/{{ link.href }}/"
+                               class="{% if request.resolver_match.url_name == link.href %}active{% endif %}">{{ link.name }}</a></li>
+                    {% endfor %}
 				</ul>
 			</div>
 
