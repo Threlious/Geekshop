@@ -1,11 +1,14 @@
 from django.shortcuts import render
 
+from mainapp.models import Product
+
 
 def index(request):
+    products = Product.objects.all()[:4]
+
     context = {
-        'no': 'Oh no',
-        'header': True,
-        'info': False
+        'title': 'главная',
+        'products': products,
     }
 
     return render(request, 'geekshop/index.html', context)
