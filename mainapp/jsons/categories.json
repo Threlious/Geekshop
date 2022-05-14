@@ -1,18 +1,1 @@
-[
-    {
-      "name": "стулья",
-      "description": ""
-  },
-  {
-      "name": "Лампы",
-      "description": ""
-  },
-  {
-      "name": "Кресла",
-      "description": ""
-  },
-  {
-      "name": "Диваны",
-      "description": ""
-  }
-]
+[{"model": "mainapp.productcategory", "pk": 1, "fields": {"name": "Стулья", "description": "", "is_active": true}}, {"model": "mainapp.productcategory", "pk": 2, "fields": {"name": "Лампы", "description": "", "is_active": true}}, {"model": "mainapp.productcategory", "pk": 3, "fields": {"name": "Кресла", "description": "", "is_active": true}}, {"model": "mainapp.productcategory", "pk": 4, "fields": {"name": "Диваны", "description": "", "is_active": true}}]
