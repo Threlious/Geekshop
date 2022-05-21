@@ -14,7 +14,7 @@
                         Профиль</a>
                 </li>
                 <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="{% url 'orders:orders_list' %}">
                         Заказы</a>
                 </li>
                 {% if user.is_superuser %}
@@ -31,6 +31,7 @@
                     {% endif %}
                 </li>
             </ul>
+
             {% if basket %}
                 <span>
                     {{ basket.0.total_cost|floatformat:0 }} руб.
