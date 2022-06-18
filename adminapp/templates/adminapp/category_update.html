@@ -14,13 +14,13 @@
                     <div class="table-responsive">
                         <form class="form-horizontal" method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ update_form.as_p }}
+                            {{ form.as_p }}
                             <input class="form-control" type="submit" value="сохранить">
                         </form>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="{% url 'admin_stuff:categories' %}">
+                    <a href="{% url 'admin_staff:categories' %}">
                         <button class="btn btn-success">К списку категорий</button>
                     </a>
                 </div>
